@@ -7,11 +7,8 @@ pipeline {
   }
  agent any
   stages {
-    stage('Git Checkout') {
-      steps {
-        git 'https://github.com/prathmeshrajmane/cicd-web.git'
-      }
-    }
+    
+   
     stage('Docker Build') {
       steps{
         script {
@@ -19,6 +16,7 @@ pipeline {
         }
       }
     }
+	   }
 	 stage('Approvals') {
 			steps{
 
