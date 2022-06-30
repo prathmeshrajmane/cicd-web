@@ -1,4 +1,2 @@
-FROM centos:8
-RUN yum install httpd -y
-COPY index.html /var/www/html/index.html
-CMD httpd -DFOREGROUND
+FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
